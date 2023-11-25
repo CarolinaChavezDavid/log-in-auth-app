@@ -1,6 +1,6 @@
 package com.carolina.log_in_auth_app.auth.usecase
 
-import com.carolina.log_in_auth_app.auth.data.AuthRepository
+import com.carolina.log_in_auth_app.auth.data.repository.AuthRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

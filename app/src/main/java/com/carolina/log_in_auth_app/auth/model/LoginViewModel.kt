@@ -17,6 +17,7 @@ class LoginViewModel @Inject constructor(
 ) : BaseViewModel<LoginState>() {
 
     var email by mutableStateOf("")
+    var isLogged by mutableStateOf(false)
 
     fun updateEmail(input: String) {
         email = input
@@ -32,7 +33,12 @@ class LoginViewModel @Inject constructor(
     fun performLogin() {
         uiState.value = LoginState.Loading
         viewModelScope.launch {
-            loginUseCase.execute(email, password)
+            try {
+                loginUseCase.execute(email, password)
+                isLogged = true
+            } catch (e: Throwable) {
+                isLogged = false
+            }
         }
     }
 }

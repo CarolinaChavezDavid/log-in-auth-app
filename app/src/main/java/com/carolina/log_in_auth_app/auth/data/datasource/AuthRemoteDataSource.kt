@@ -1,7 +1,6 @@
 package com.carolina.log_in_auth_app.auth.data.datasource
 
-import com.carolina.log_in_auth_app.auth.data.AccessTokenRequest
-import com.carolina.log_in_auth_app.auth.data.AuthService
+import com.carolina.log_in_auth_app.auth.data.api.AuthService
 import com.carolina.log_in_auth_app.auth.data.response.AuthResponse
 import com.carolina.log_in_auth_app.auth.util.parseResponse
 import javax.inject.Inject

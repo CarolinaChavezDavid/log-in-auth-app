@@ -25,7 +25,6 @@ val mediumHeaderTextStyle = TextStyle(
     fontSize = 13.sp,
     fontWeight = FontWeight.Bold,
     lineHeight = 20.sp,
-    letterSpacing = (-0.8).sp,
     color = Color.White,
 )
 

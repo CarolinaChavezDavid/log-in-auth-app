@@ -1,6 +1,5 @@
-package com.carolina.log_in_auth_app.view
+package com.carolina.log_in_auth_app.app.view
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -9,13 +8,13 @@ import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import coil.compose.AsyncImage
 
 @Composable
-fun ScreensBackground(resourceId: Int) {
-    Image(
-        painter = painterResource(id = resourceId),
-        contentDescription = "splash background",
+fun ScreensBackground(imageUrl: String) {
+    AsyncImage(
+        model = imageUrl,
+        contentDescription = "survey background",
         contentScale = ContentScale.Crop,
         modifier = Modifier.fillMaxSize().drawWithCache {
             val gradient = Brush.verticalGradient(

@@ -10,7 +10,7 @@ class AuthLocalDataSource @Inject constructor(
 ) {
     private val authTokenEntityDao = appDatabase.authTokenDao()
 
-    suspend fun getAuthToken(): AuthEntity? {
+    fun getAuthToken(): AuthEntity? {
         return authTokenEntityDao.getAuthToken()
     }
 

@@ -1,6 +1,7 @@
-package com.carolina.log_in_auth_app.auth.data
+package com.carolina.log_in_auth_app.auth.data.repository
 
 import android.util.Log
+import com.carolina.log_in_auth_app.auth.data.datasource.AccessTokenRequest
 import com.carolina.log_in_auth_app.auth.data.datasource.AuthLocalDataSource
 import com.carolina.log_in_auth_app.auth.data.datasource.AuthRemoteDataSource
 import com.carolina.log_in_auth_app.auth.data.mappers.toTokenEntity

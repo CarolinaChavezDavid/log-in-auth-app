@@ -14,7 +14,7 @@ interface AuthEntityDao {
     suspend fun insertAuthToken(user: AuthEntity)
 
     @Query("SELECT * FROM AuthEntity")
-    suspend fun getAuthToken(): AuthEntity?
+    fun getAuthToken(): AuthEntity?
 
     @Query("SELECT * FROM AuthEntity")
     fun getAuthTokenFlow(): Flow<AuthEntity?>

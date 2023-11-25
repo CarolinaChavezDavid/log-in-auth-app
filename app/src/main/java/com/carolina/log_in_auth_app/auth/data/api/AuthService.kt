@@ -1,4 +1,4 @@
-package com.carolina.log_in_auth_app.auth.data
+package com.carolina.log_in_auth_app.auth.data.api
 
 import com.carolina.log_in_auth_app.auth.data.response.AuthResponse
 import retrofit2.Response

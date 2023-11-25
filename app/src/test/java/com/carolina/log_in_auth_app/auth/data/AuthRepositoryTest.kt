@@ -1,8 +1,10 @@
 package com.carolina.log_in_auth_app.auth.data
 
+import com.carolina.log_in_auth_app.auth.data.datasource.AccessTokenRequest
 import com.carolina.log_in_auth_app.auth.data.datasource.AuthLocalDataSource
 import com.carolina.log_in_auth_app.auth.data.datasource.AuthRemoteDataSource
 import com.carolina.log_in_auth_app.auth.data.mappers.toTokenEntity
+import com.carolina.log_in_auth_app.auth.data.repository.AuthRepository
 import com.carolina.log_in_auth_app.auth.data.response.AuthResponse
 import kotlinx.coroutines.runBlocking
 import org.junit.Before

@@ -1,4 +1,4 @@
-package com.carolina.log_in_auth_app.view.splash
+package com.carolina.log_in_auth_app.app.view.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -17,7 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.carolina.log_in_auth_app.R
-import com.carolina.log_in_auth_app.view.navigation.AppScreens
+import com.carolina.log_in_auth_app.app.view.navigation.AppScreens
 import kotlinx.coroutines.delay
 
 @Composable

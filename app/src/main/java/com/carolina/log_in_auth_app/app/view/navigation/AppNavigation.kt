@@ -1,12 +1,13 @@
-package com.carolina.log_in_auth_app.view.navigation
+package com.carolina.log_in_auth_app.app.view.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.carolina.log_in_auth_app.auth.model.LoginViewModel
-import com.carolina.log_in_auth_app.view.login.LoginScreen
-import com.carolina.log_in_auth_app.view.splash.SplashScreen
+import com.carolina.log_in_auth_app.auth.view.LoginScreen
+import com.carolina.log_in_auth_app.survey.view.CarouselScreen
+import com.carolina.log_in_auth_app.app.view.splash.SplashScreen
 
 @Composable
 fun AppNavigation(viewModel: LoginViewModel) {
@@ -19,7 +20,11 @@ fun AppNavigation(viewModel: LoginViewModel) {
             SplashScreen(navController)
         }
         composable(AppScreens.LoginScreen.route) {
-            LoginScreen(viewModel)
+            LoginScreen(viewModel, navController)
+        }
+
+        composable(AppScreens.CarouselScreen.route) {
+            CarouselScreen()
         }
     }
 }

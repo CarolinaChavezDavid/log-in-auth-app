@@ -1,4 +1,4 @@
-package com.carolina.log_in_auth_app.view
+package com.carolina.log_in_auth_app.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,4 +1,4 @@
-package com.carolina.log_in_auth_app.view.login
+package com.carolina.log_in_auth_app.auth.view
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -40,14 +40,19 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.carolina.log_in_auth_app.R
+import com.carolina.log_in_auth_app.app.view.navigation.AppScreens
 import com.carolina.log_in_auth_app.auth.model.LoginViewModel
 import com.carolina.log_in_auth_app.theme.ColorTextHint
 import com.carolina.log_in_auth_app.theme.smallTextBoldStyle
 import com.carolina.log_in_auth_app.theme.smallTextStyle
 
 @Composable
-fun LoginScreen(viewModel: LoginViewModel) {
+fun LoginScreen(
+    viewModel: LoginViewModel,
+    navController: NavController,
+) {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center,
@@ -75,7 +80,7 @@ fun LoginScreen(viewModel: LoginViewModel) {
             modifier = Modifier.fillMaxSize(),
         ) {
             LoginHeader()
-            LoginForm(viewModel)
+            LoginForm(viewModel, navController)
         }
     }
 }
@@ -203,7 +208,7 @@ fun LoginHeader() {
 }
 
 @Composable
-fun LoginForm(viewModel: LoginViewModel) {
+fun LoginForm(viewModel: LoginViewModel, navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize().padding(horizontal = 24.dp),
         verticalArrangement = Arrangement.spacedBy(
@@ -218,7 +223,10 @@ fun LoginForm(viewModel: LoginViewModel) {
                 .fillMaxWidth()
                 .height(56.dp)
                 .background(Color.White, RoundedCornerShape(12.dp))
-                .clickable { viewModel.performLogin() },
+                .clickable {
+                    viewModel.performLogin()
+                    if (viewModel.isLogged) navController.navigate(AppScreens.CarouselScreen.route)
+                },
             contentAlignment = Alignment.Center,
         ) {
             Text(text = "Log in", style = smallTextBoldStyle)

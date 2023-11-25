@@ -1,4 +1,4 @@
-package com.carolina.log_in_auth_app.view
+package com.carolina.log_in_auth_app.app.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.carolina.log_in_auth_app.auth.model.LoginViewModel
 import com.carolina.log_in_auth_app.theme.LoginauthappTheme
-import com.carolina.log_in_auth_app.view.navigation.AppNavigation
+import com.carolina.log_in_auth_app.app.view.navigation.AppNavigation
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

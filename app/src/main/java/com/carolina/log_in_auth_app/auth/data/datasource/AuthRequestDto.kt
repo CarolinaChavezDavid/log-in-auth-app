@@ -1,4 +1,4 @@
-package com.carolina.log_in_auth_app.auth.data
+package com.carolina.log_in_auth_app.auth.data.datasource
 
 import com.squareup.moshi.Json
 
